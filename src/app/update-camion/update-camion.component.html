@@ -1,0 +1,26 @@
+<div class="container">
+    <div>
+    <h2>Modifier un Camion :</h2>
+    </div>
+    <form >
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >ID Camion</label>
+        <input Readonly type="text" [(ngModel)]="currentCamion.idCamion" name="idCamion" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+        <label >Modèle Camion</label>
+        <input type="text"[(ngModel)]= "currentCamion.modelCamion" name="modelCamion" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >Prix Camion</label>
+        <input type="number" [(ngModel)]= "currentCamion.prixCamion" name="prixCamion" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+        <label >Date Fabrication</label>
+        <input type="date" [(ngModel)]= "currentCamion.dateFabrication" name="dateFabrication" class="form-control">
+        </div>
+        <div class="mt-2">
+        <button type="submit" (click)="updateCamion()" class="btn btn-success">Modifier</button>
+        </div>
+        </form>
+        </div>

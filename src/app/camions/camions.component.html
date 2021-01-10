@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="card shadow mb-4">
+    <div class="card-body">
+    <table class="table table-striped">
+    <tr> <th>Idcamion</th><th>Modele Camion</th> <th>Prix camion</th> <th>Date Fabrication</th> </tr>
+    <tbody *ngFor="let camion of camions">
+    <tr >
+    <td>{{camion.idCamion}}</td>
+    <td>{{camion.modelCamion}}</td>
+    <td>{{camion.prixCamion}}</td>
+    <td>{{camion.dateFabrication | date:'dd/MM/yyyy'}}</td>
+    <td><a class="btn btn-danger" (click)="supprimerCamion(camion)">Supprimer</a></td>
+    <td><a class="btn btn-success" [routerLink]="['/updateCamion',camion.idCamion]">Modifier</a></td>
+    
+    
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
